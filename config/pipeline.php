@@ -1,5 +1,6 @@
 <?php
 
+use CrafttekkModConsole\Authentication\Action\AuthenticationAction;
 use Zend\Expressive\Helper\ServerUrlMiddleware;
 use Zend\Expressive\Helper\UrlHelperMiddleware;
 use Zend\Expressive\Middleware\ImplicitHeadMiddleware;
@@ -35,6 +36,7 @@ $app->pipe(ServerUrlMiddleware::class);
 // - $app->pipe('/docs', $apiDocMiddleware);
 // - $app->pipe('/files', $filesMiddleware);
 
+$app->pipe(AuthenticationAction::class);
 // Register the routing middleware in the middleware pipeline
 $app->pipeRoutingMiddleware();
 $app->pipe(ImplicitHeadMiddleware::class);

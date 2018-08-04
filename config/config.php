@@ -12,6 +12,14 @@ $cacheConfig = [
 ];
 
 $aggregator = new ConfigAggregator([
+    \Zend\Cache\ConfigProvider::class,
+    \Zend\Paginator\ConfigProvider::class,
+    \Zend\Form\ConfigProvider::class,
+    \Zend\InputFilter\ConfigProvider::class,
+    \Zend\Filter\ConfigProvider::class,
+    \Zend\Hydrator\ConfigProvider::class,
+    \Zend\Validator\ConfigProvider::class,
+    \CrafttekkModConsole\Authentication\ConfigProvider::class,
     ConfigProvider::class,
     // Include cache configuration
     new ArrayProvider($cacheConfig),

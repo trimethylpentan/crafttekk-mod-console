@@ -7,17 +7,20 @@
         "sort-packages": true
     },
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.0",
         "http-interop/http-middleware": "^0.4.1",
         "roave/security-advisories": "dev-master",
+        "zendframework/zend-authentication": "^2.6",
         "zendframework/zend-component-installer": "^1.0",
         "zendframework/zend-config-aggregator": "^1.0",
         "zendframework/zend-expressive": "^2.0.5",
-        "zendframework/zend-expressive-helpers": "^4.0",
-        "zendframework/zend-stdlib": "^3.1",
-        "zendframework/zend-servicemanager": "^3.3",
         "zendframework/zend-expressive-fastroute": "^2.0",
-        "zendframework/zend-expressive-zendviewrenderer": "^1.4"
+        "zendframework/zend-expressive-helpers": "^4.0",
+        "zendframework/zend-expressive-zendviewrenderer": "^1.4",
+        "zendframework/zend-servicemanager": "^3.3",
+        "zendframework/zend-stdlib": "^3.1",
+        "doctrine/common": ">=v2.7.2",
+        "doctrine/doctrine-orm-module": "^1.1"
     },
     "require-dev": {
         "filp/whoops": "^2.1.7",
@@ -28,7 +31,8 @@
     },
     "autoload": {
         "psr-4": {
-            "CrafttekkModConsole\\Backend\\": "src/Backend/src/"
+            "CrafttekkModConsole\\Backend\\": "src/Backend/src/",
+            "CrafttekkModConsole\\Authentication\\": "src/Authentication/src/"
         }
     },
     "scripts": {

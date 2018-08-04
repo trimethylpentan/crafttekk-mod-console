@@ -26,8 +26,12 @@
  * );
  */
 
+use CrafttekkModConsole\Authentication\Action\LoginAction;
+use CrafttekkModConsole\Authentication\Action\LoginPostAction;
 use CrafttekkModConsole\Backend\Action\IndexAction;
 
 /** @var \Zend\Expressive\Application $app */
 
 $app->get('/', IndexAction::class, 'home');
+$app->get('/login', LoginAction::class, 'login');
+$app->post('/login', LoginPostAction::class);
